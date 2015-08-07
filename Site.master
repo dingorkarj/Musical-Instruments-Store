@@ -1,0 +1,86 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site.master.cs" Inherits="Site" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <link href="Content/Site.css" rel="stylesheet" runat="server" type ="text/css"/>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div style="float:left; width:185px; box-shadow:none; height:auto">
+        <asp:SiteMapPath ID="SiteMapPath1" runat="server" CssClass="header"></asp:SiteMapPath><br />
+        <asp:TreeView ID="TreeView1" runat="server">
+            <Nodes>
+                <asp:TreeNode NavigateUrl="~/Default.aspx" Text="Home" Value="Home">
+                    <asp:TreeNode NavigateUrl="~/Percussion.aspx" Text="Percussion" Value="Percussion">
+                        <asp:TreeNode NavigateUrl="~/Bells.aspx" Text="Bells" Value="Bells"></asp:TreeNode>
+                        <asp:TreeNode NavigateUrl="~/DrumSet.aspx" Text="Drum Sets" Value="Drum Sets"></asp:TreeNode>
+                        <asp:TreeNode NavigateUrl="~/Tabla.aspx" Text="Tabla" Value="Tabla"></asp:TreeNode>
+                        <asp:TreeNode NavigateUrl="~/Xylophone.aspx" Text="Xylophone" Value="Xylophone"></asp:TreeNode>
+                    </asp:TreeNode>
+                    <asp:TreeNode NavigateUrl="~/String.aspx" Text="String Instruments" Value="String Instruments">
+                        <asp:TreeNode NavigateUrl="~/AcousticGuitar.aspx" Text="Acoustic Guitar" Value="Acoustic Guitar"></asp:TreeNode>
+                        <asp:TreeNode NavigateUrl="~/BassGuitar.aspx" Text="Bass Guitar" Value="Bass Guitar"></asp:TreeNode>
+                        <asp:TreeNode NavigateUrl="~/ElectricGuitar.aspx" Text="Electric Guitar"></asp:TreeNode>
+                        <asp:TreeNode NavigateUrl="~/Mandolin.aspx" Text="Mandolin" Value="Mandolin"></asp:TreeNode>
+                        <asp:TreeNode NavigateUrl="~/Sitar.aspx" Text="Sitar" Value="Sitar"></asp:TreeNode>
+                        <asp:TreeNode NavigateUrl="~/Violin.aspx" Text="Violin" Value="Violin"></asp:TreeNode>
+                    </asp:TreeNode>
+                    <asp:TreeNode NavigateUrl="~/Wind.aspx" Text="Wind Instruments" Value="Wind Instruments">
+                        <asp:TreeNode NavigateUrl="~/Flute.aspx" Text="Flute" Value="Flute"></asp:TreeNode>
+                        <asp:TreeNode NavigateUrl="~/MouthOrgan.aspx" Text="Mouth Organ" Value="Mouth Organ"></asp:TreeNode>
+                        <asp:TreeNode NavigateUrl="~/Trambone.aspx" Text="Trambone" Value="Trambone"></asp:TreeNode>
+                    </asp:TreeNode>
+                </asp:TreeNode>
+            </Nodes>
+        </asp:TreeView> 
+        
+        <asp:Menu ID="Menu1" runat="server" OnMenuItemClick="Menu1_MenuItemClick">
+            <Items>
+                <asp:MenuItem NavigateUrl="~/Percussion.aspx" Text="Percussion" Value="Percussion">
+                    <asp:MenuItem NavigateUrl="~/Bells.aspx" Text="Bells" Value="Bells"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/DrumSet.aspx" Text="Drum Set" Value="Drum Set"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/Tabla.aspx" Text="Tabla" Value="Tabla"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/Xylophone.aspx" Text="Xylophone" Value="Xylophone"></asp:MenuItem>
+                </asp:MenuItem>
+                <asp:MenuItem NavigateUrl="~/String.aspx" Text="String" Value="String">
+                    <asp:MenuItem NavigateUrl="~/AcousticGuitar.aspx" Text="Acoustic Guitar" Value="Acoustic Guitar"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/BassGuitar.aspx" Text="Bass Guitar" Value="Bass Guitar"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/ElectricGuitar.aspx" Text="Electric Guitar"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/Mandolin.aspx" Text="Mandolin" Value="Mandolin"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/Sitar.aspx" Text="Sitar" Value="Sitar"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/Violin.aspx" Text="Violin" Value="Violin"></asp:MenuItem>
+                </asp:MenuItem>
+                <asp:MenuItem NavigateUrl="~/Wind.aspx" Text="Wind" Value="Wind">
+                    <asp:MenuItem NavigateUrl="~/Flute.aspx" Text="Flute" Value="Flute"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/MouthOrgan.aspx" Text="Mouth Organ" Value="Mouth Organ"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/Trambone.aspx" Text="Trambone" Value="Trambone"></asp:MenuItem>
+                    <asp:MenuItem Text="New Item" Value="New Item"></asp:MenuItem>
+                </asp:MenuItem>
+            </Items>
+            
+        </asp:Menu>
+                <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server" >
+        
+        </asp:ContentPlaceHolder>
+    </div>
+         
+        <div style="box-shadow:none; margin-left:200px;" >
+            <asp:ContentPlaceHolder ID="header" runat="server">
+               
+               
+                <asp:Image ID="Image1" runat="server"  ImageUrl="~/Content/Images/blank-banner.jpg" Width="1100px"/>
+               
+            </asp:ContentPlaceHolder>
+
+            <asp:ContentPlaceHolder ID = "body" runat  = "server">
+
+
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
